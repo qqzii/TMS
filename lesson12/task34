@@ -1,0 +1,18 @@
+1. Зарегистрироваться на github.
+   Сохранить в файл: логин пароль email
+
+2. Скачать и поставить git (жать next\...\next\install).
+   https://git-scm.com/download/win
+
+3. Создать репозиторий с именем my_first_project.
+   Для этого:
+   - Перейти на https://github.com/new
+   - Ввести имя репозитория в поле с названием "Repository name"
+   - Нажать кнопку "Create repository"
+   - Сохранить ссылку вида "https://github.com/***.git"
+
+4. В pycharm закрыть текущий проект
+   File -> Close Project
+
+5. Нажать "Check out from Version Control" -> "Git"
+   Вставить ссылку вида "https://github.com/***.git"
