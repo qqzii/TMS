@@ -165,3 +165,6 @@ def f15():
 
 # print(f15())
 
+def f16():
+    hours = int(input('Введите число часов: '))
+    min = int(input('Введите число минут: '))
