@@ -166,5 +166,20 @@ def f15():
 # print(f15())
 
 def f16():
-    hours = int(input('Введите число часов: '))
     min = int(input('Введите число минут: '))
+    hours_enter = int(input('Введите число часов: '))
+    hours = hours_enter * 5 + int(min / 12)
+    count = 0
+    while min != hours:
+        min += 12
+        hours += 1
+        count += 12
+        if min > 60:
+            min %= 60
+        if hours > 60:
+            hours %= 60
+    return count
+
+# print(f16())
+
+# def f17():
