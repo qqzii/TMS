@@ -230,14 +230,15 @@ def f96():
 
 # f96()
 
-# def f97():
-#     n = int(input('Введите n: '))
-#     count = 0
-#     sum = 0
-#     while count <= n:
-#
-#     print(sum)
-#
+def f97():
+    n = int(input('Введите n: '))
+    count = 1
+    sum = 0
+    while count <= n:
+        sum += int(math.factorial(count * 2) / math.factorial(count - 1))
+        count += 1
+    print(sum)
+
 # f97()
 
 def f98():
@@ -306,3 +307,159 @@ def f100():
 
 # f100()
 
+def f101():
+    n = 10000
+    while n <= 99999:
+        tens_of_thousand = int(n / 10000)
+        thousand = int(n / 1000) - tens_of_thousand * 10
+        hundreds = int(n / 100) - (tens_of_thousand * 100 + thousand * 10)
+        units = int(n % 10)
+        dozens = int((int(n % 100) - units) / 10)
+        first_if = n % 2 == 0
+        second_if = hundreds % 2 == 1
+        third_if = (tens_of_thousand + thousand + hundreds + dozens + units) % 4 == 0
+        if first_if and second_if and third_if:
+            print(n)
+        n += 1
+
+# f101()
+
+def f102():
+    n = 1000
+    while n <= 9999:
+        thousand = int(n/1000)
+        hundreds = (int(n/100)) - thousand * 10
+        units = int(n % 10)
+        dozens = int((int(n % 100) - units) / 10)
+        if thousand == 3 or hundreds == 3 or dozens == 3 or units == 3:
+            print(n)
+        n += 1
+
+# f102()
+
+def f103():
+    n = 100
+    while n <= 999:
+        hundreds = int(n/100)
+        units = int(n % 10)
+        dozens = int((int(n % 100) - units) / 10)
+        if n == (hundreds**3 + dozens**3 + units**3):
+            print(n)
+        n += 1
+
+# f103()
+
+def f104():
+    n = 1000
+    count = 0
+    while n <= 9999:
+        thousand = int(n/1000)
+        hundreds = (int(n/100)) - thousand * 10
+        units = int(n % 10)
+        dozens = int((int(n % 100) - units) / 10)
+        if n == 600 * (thousand + hundreds + dozens + units):
+            print(n)
+            count += 1
+        n += 1
+    print('Ответ: ' + str(count))
+
+# f104()
+
+def f105():
+    n = 0
+    condition = True
+    while condition:
+        if n % 11 == 0 and n % 2 == 1 and n % 3 == 1 and n % 4 == 1 and n % 5 == 1 and n % 6 == 1 and n % 7 == 1 and n % 8 == 1 and n % 9 == 1 and n % 10 == 1:
+            print(n)
+            condition = False
+        n += 1
+
+# f105()
+
+def f106():
+    n = int(input('Введите n: '))
+    print('1' * n)
+    print('2' * (2*n))
+    print('3' * (3*n))
+
+# f106()
+
+def f107():
+    n = 10
+    sum = 0
+    while n > 0:
+        print((str(n) + ' ') * n)
+        sum += n * n
+        n -= 1
+    print(sum)
+
+# f107()
+
+def f108():
+    n = int(input('Введите n: '))
+    count = 1
+    while count <= n:
+        print(' * ' * count)
+        count += 1
+
+# f108()
+
+def f109():
+    n = int(input('Введите n: '))
+    count = 1
+    while count <= n:
+        if count % 2 == 1:
+            print(' * ' * 7)
+        else:
+            print(' * ' * 4)
+        count += 1
+
+# f109()
+
+def f110():
+    n = int(input('Введите n: '))
+    m = int(input('Введите m: '))
+    count = 1
+    while count <= n:
+        print((' A ' * 3 + ' B ' * 3) * m)
+        count += 1
+
+# f110()
+
+def f111():
+    n = int(input('Введите n: '))
+    count = 1
+    while count <= n:
+        if count == 1 or count == n:
+            print(' A ' * (2 * n))
+        else:
+            print(' A ' + ' B ' * (2 * n - 2) + ' A ')
+        count += 1
+
+# f111()
+
+def f112():
+    n = 10
+    while n > 0:
+        count = 10
+        while count > 0:
+            if count == n:
+                print(' 0 ', end='')
+            else:
+                print(' 1 ', end='')
+            count -= 1
+        print(end='\n')
+        n -= 1
+
+# f112()
+
+def f113():
+    count = 1
+    while count <= 20:
+        if count % 2 == 0:
+            print(str(count) * 10)
+        else:
+            print('1' * 10)
+        count += 1
+
+# f113()
